@@ -162,7 +162,7 @@ const AuthPage = ({ isOpen, onClose, initialMode = "login" }) => {
         if (response.ok) {
           toast.success("Login successful! Redirecting to dashboard.", { theme: "dark", transition: Bounce });
           localStorage.setItem("token", data.token);
-          setTimeout(() => navigate('dashboard'), 4000);
+          setTimeout(() => navigate('/dashboard'), 4000);
         } else {
           toast.error(data.error || "Login failed.", { theme: "dark", transition: Bounce });
         }
@@ -326,7 +326,7 @@ const StudyBuddyIntro = () => {
   };
 
   if (isAuthenticated()) {
-    navigate('dashboard');
+    navigate('/dashboard');
   }
 
   const [showFirstLine, setShowFirstLine] = useState(true);

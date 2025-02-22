@@ -226,7 +226,7 @@ const ProfileMenu = ({ onSettingsClick }) => {
           </div>
 
           <div className="border-t border-gray-200 mt-1">
-            <button onClick={() => navigate('logout')} className="w-full px-4 py-2 text-left flex items-center gap-2 text-red-600 hover:bg-gray-100">
+            <button onClick={() => navigate('/logout')} className="w-full px-4 py-2 text-left flex items-center gap-2 text-red-600 hover:bg-gray-100">
               <LogOut className="w-4 h-4" />
               <span>Log Out</span>
             </button>
