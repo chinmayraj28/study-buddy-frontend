@@ -160,7 +160,7 @@ const AuthPage = ({ isOpen, onClose, initialMode = "login" }) => {
         if (response.ok) {
           toast.success("Login successful! Redirecting to dashboard.", { theme: "dark", transition: Bounce });
           localStorage.setItem("token", data.token);
-          setTimeout(() => window.location.href = "/dashboard", 4000);
+          setTimeout(() => window.location.href = "/study-buddy-frontend/dashboard", 4000);
         } else {
           toast.error(data.error || "Login failed.", { theme: "dark", transition: Bounce });
         }
@@ -323,7 +323,7 @@ const StudyBuddyIntro = () => {
   };
 
   if (isAuthenticated()) {
-    window.location = "/dashboard"; // Redirect if already logged in
+    window.location = "/study-buddy-frontend/dashboard"; // Redirect if already logged in
   }
 
   const [showFirstLine, setShowFirstLine] = useState(true);
