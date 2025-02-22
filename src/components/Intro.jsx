@@ -323,8 +323,8 @@ const StudyBuddyIntro = () => {
   };
 
   if (isAuthenticated()) {
-    window.location = "/study-buddy-frontend/dashboard"; // Redirect if already logged in
-  }
+    window.location.href = "/study-buddy-frontend/dashboard";
+}
 
   const [showFirstLine, setShowFirstLine] = useState(true);
   const [showSecondLine, setShowSecondLine] = useState(false);
