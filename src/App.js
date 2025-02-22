@@ -8,7 +8,7 @@ import Logout from "./components/Logout";
 
 function App() {
   return (
-    <Router basename="/study-buddy-frontend">
+    <Router>
       <Routes>
         <Route path="/" element={<Intro />} />
         <Route
