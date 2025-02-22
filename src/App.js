@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Mainpage from "./components/Mainpage";
 import Intro from "./components/Intro";
@@ -8,7 +8,7 @@ import Logout from "./components/Logout";
 
 function App() {
   return (
-    <Router basename="/study-buddy-frontend">
+    <Router>
       <Routes>
         <Route path="/" element={<Intro />} />
         <Route
