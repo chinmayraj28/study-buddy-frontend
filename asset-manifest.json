@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/study-buddy-frontend/static/css/main.8103b2df.css",
+    "main.js": "/study-buddy-frontend/static/js/main.0d631321.js",
+    "index.html": "/study-buddy-frontend/index.html",
+    "main.8103b2df.css.map": "/study-buddy-frontend/static/css/main.8103b2df.css.map",
+    "main.0d631321.js.map": "/study-buddy-frontend/static/js/main.0d631321.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8103b2df.css",
+    "static/js/main.0d631321.js"
+  ]
+}
