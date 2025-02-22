@@ -324,7 +324,7 @@ const StudyBuddyIntro = () => {
 
   if (isAuthenticated()) {
     window.location.href = "/study-buddy-frontend/dashboard";
-}
+  }
 
   const [showFirstLine, setShowFirstLine] = useState(true);
   const [showSecondLine, setShowSecondLine] = useState(false);
