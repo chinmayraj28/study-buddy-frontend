@@ -4,6 +4,7 @@ import SplitText from "./Split";
 import Squares from "./Squares";
 import { ToastContainer, toast, Bounce } from 'react-toastify';
 import { jwtDecode } from "jwt-decode";
+import { useNavigate } from 'react-router-dom';
 
 const ForgotPasswordModal = ({ isOpen, onClose }) => {
   const [email, setEmail] = useState("");
@@ -78,6 +79,7 @@ const ForgotPasswordModal = ({ isOpen, onClose }) => {
 const AuthPage = ({ isOpen, onClose, initialMode = "login" }) => {
   const { server_url } = require("../config/config.json");
   const [showForgotPassword, setShowForgotPassword] = useState(false);
+  const navigate = useNavigate();
 
   const isValidUsername = (username) => /^[a-zA-Z0-9_]{3,20}$/.test(username);
   const isValidPassword = (password) =>
@@ -160,7 +162,7 @@ const AuthPage = ({ isOpen, onClose, initialMode = "login" }) => {
         if (response.ok) {
           toast.success("Login successful! Redirecting to dashboard.", { theme: "dark", transition: Bounce });
           localStorage.setItem("token", data.token);
-          setTimeout(() => window.location.href = "/study-buddy-frontend/dashboard", 4000);
+          setTimeout(() => navigate('dashboard'), 4000);
         } else {
           toast.error(data.error || "Login failed.", { theme: "dark", transition: Bounce });
         }
@@ -302,6 +304,7 @@ const AuthPage = ({ isOpen, onClose, initialMode = "login" }) => {
 };
 
 const StudyBuddyIntro = () => {
+  const navigate = useNavigate();
   const isAuthenticated = () => {
     const token = localStorage.getItem("token");
     if (!token) return false;
@@ -323,7 +326,7 @@ const StudyBuddyIntro = () => {
   };
 
   if (isAuthenticated()) {
-    window.location.href = "/study-buddy-frontend/dashboard";
+    navigate('dashboard');
   }
 
   const [showFirstLine, setShowFirstLine] = useState(true);

@@ -22,7 +22,7 @@ const isAuthenticated = () => {
 };
 
 const PrivateRoute = ({ children }) => {
-    return isAuthenticated() ? children : <Navigate to="/study-buddy-frontend/" replace />;
+    return isAuthenticated() ? children : <Navigate to="dashboard" replace />;
 };
 
 export default PrivateRoute;
